@@ -2,14 +2,7 @@ package main_package;
 import template_pattern.BaseAlgorithm;
 import template_pattern.ChildAlgo_1;
 import template_pattern.ChildAlgo_2;
-/*
- * @author		- 	Thathsara Pramodya Thalangama
- * 
- * @description - 
- * 					This implementation demonstrates how "Template" design pattern works.
- * @Usage 		- 	Utilize the Template Method Pattern when you encounter a repetitive logic structure, but variations in the implementation depend on the specific objects utilizing that logic.
- *  		
- * */
+
 
 
 public class MainProgram {
