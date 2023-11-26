@@ -1,10 +1,19 @@
 package template_pattern;
 
+/*
+ * @author		- 	Thathsara Pramodya Thalangama
+ * 
+ * @description - 
+ * 					This implementation demonstrates how "Template" design pattern works.
+ * @Usage 		- 	Utilize the Template Method Pattern when you encounter a repetitive logic structure, but variations in the implementation depend on the specific objects utilizing that logic.
+ *  		
+ * */
+
 public abstract class BaseAlgorithm {
 	
 	
 	//This method executes the steps of algo
-	void runAlgo() {
+	public void runAlgo() {
 		step1();
 		step2();
 		step3();
@@ -13,7 +22,7 @@ public abstract class BaseAlgorithm {
 	
 	void step1() {
 		
-		System.out.printf("Step 1 is running - This is step 1 of the base algorithm and it's common\n\n");
+		System.out.printf("Step 1 is running from baseAlgo\n\n");
 		return;
 	}
 	
@@ -22,7 +31,7 @@ public abstract class BaseAlgorithm {
 	abstract void step3();
 	
 	void step4() {
-		System.out.printf("Step 4 is running - This is the last step of the base algorithm and it's common\n\n");
+		System.out.printf("Step 4 is running from baseAlgo\n\n\n\n");
 		return;
 	}
 }
