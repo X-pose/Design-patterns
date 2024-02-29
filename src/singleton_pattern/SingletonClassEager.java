@@ -4,6 +4,8 @@ package singleton_pattern;
 /*
  * @author		- 	Thathsara Pramodya Thalangama
  *
+ * @Category    -   Creational pattern
+ *
  * @description -	This implementation demonstrates how "Singleton" design pattern works.
  *
  * @Usage 		- 	Utilize the Singleton Pattern when you need to ensure that only one object of that class should be created.

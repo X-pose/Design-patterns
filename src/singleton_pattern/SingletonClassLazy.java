@@ -2,6 +2,8 @@ package singleton_pattern;
 
 /*
  * @author		- 	Thathsara Pramodya Thalangama
+ *
+ * @Category    -   Creational pattern
  * 
  * @description - This implementation demonstrates how "Singleton" design pattern works.
  * 

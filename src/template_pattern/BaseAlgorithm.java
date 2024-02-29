@@ -2,9 +2,11 @@ package template_pattern;
 
 /*
  * @author		- 	Thathsara Pramodya Thalangama
+ *
+ * @Category    -   Behavioral pattern
  * 
- * @description - 
- * 					This implementation demonstrates how "Template" design pattern works.
+ * @description - This implementation demonstrates how "Template" design pattern works.
+ *
  * @Usage 		- 	Utilize the Template Method Pattern when you encounter a repetitive logic structure, but variations in the implementation depend on the specific objects utilizing that logic.
  *  		
  * */
