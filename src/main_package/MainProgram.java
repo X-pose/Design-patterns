@@ -5,6 +5,10 @@ import template_pattern.ChildAlgo_2;
 
 import java.util.Scanner;
 
+import command_pattern.Light;
+import command_pattern.RemoteController;
+import command_pattern.TurnOffCommand;
+import command_pattern.TurnOnCommand;
 import factory_pattern.CarFactory;
 //Singleton pattern imports
 import factory_pattern.FactoryInterface;
@@ -20,6 +24,8 @@ public class MainProgram {
 		runSingletonDesign();
 
 		runFactoryMethod();
+		
+		runCommandMethod();
 	}
 	
 	private static void runTemplateDesign() {
@@ -69,6 +75,25 @@ public class MainProgram {
 		//Closing the scanner object to avoid resource leaks
 		sc.close();
 
+	}
+	
+	private static void runCommandMethod() {
+		 // Create Receiver
+        Light light = new Light();
+
+        // Create Commands
+        TurnOnCommand turnOnCommand = new TurnOnCommand(light);
+        TurnOffCommand turnOffCommand = new TurnOffCommand(light);
+
+        // Create Invoker
+        RemoteController remoteControl = new RemoteController();
+
+        // Associate Commands with Invoker
+        remoteControl.setCommand(turnOnCommand);
+        remoteControl.pressButton(); // Light is on
+
+        remoteControl.setCommand(turnOffCommand);
+        remoteControl.pressButton(); // Light is off
 	}
 
 }
