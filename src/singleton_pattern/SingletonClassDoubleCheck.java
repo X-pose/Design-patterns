@@ -14,11 +14,11 @@ package singleton_pattern;
  * */
 public class SingletonClassDoubleCheck {
 
-    private SingletonClassDoubleCheck();
+    private SingletonClassDoubleCheck() {}
 
-    private static SingletonClassDoubleCheck uniqueInstance = null;
+    private static volatile SingletonClassDoubleCheck uniqueInstance = null;
 
-    public static volatile getInstance(){
+    public static  SingletonClassDoubleCheck getInstance(){
         if(uniqueInstance == null){
             synchronized (SingletonClassDoubleCheck.class){
                 if(uniqueInstance == null) {

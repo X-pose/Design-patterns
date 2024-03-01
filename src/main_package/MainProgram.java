@@ -3,8 +3,12 @@ package main_package;
 import template_pattern.ChildAlgo_1;
 import template_pattern.ChildAlgo_2;
 
+import java.util.Scanner;
+
+import factory_pattern.CarFactory;
 //Singleton pattern imports
-import singleton_pattern.SingletonClass;
+import factory_pattern.FactoryInterface;
+import singleton_pattern.SingletonClassEager;
 
 public class MainProgram {
 
@@ -14,11 +18,11 @@ public class MainProgram {
 		runTemplateDesign();
 		
 		runSingletonDesign();
-	
-		
+
+		runFactoryMethod();
 	}
 	
-	static void runTemplateDesign() {
+	private static void runTemplateDesign() {
 		
 		//Creating an object from childAlgo_1 to run the algo
 		ChildAlgo_1 newChild_1 = new ChildAlgo_1();
@@ -36,15 +40,35 @@ public class MainProgram {
 	
 	/*
 	 * This function should first create a new singleton instance and then when called again it should only return the already created instance*/
-	static void runSingletonDesign() {
+	private static void runSingletonDesign() {
 		
 		//Calling first time
 		System.out.println("Calling first time :- \n");
-		SingletonClass.getInstance();
+		SingletonClassEager.getInstance();
 		
 		//Calling second time
 		System.out.println("Calling second time :- \n");
-		SingletonClass.getInstance();		
+		SingletonClassEager.getInstance();		
+	}
+
+	private static void runFactoryMethod(){
+		Scanner sc = new Scanner(System.in);
+		String type;
+
+		//Getting the type from runtime
+		System.out.println("Choose Car Model(Benz/BMW)");
+		type = sc.next();
+
+
+		//Getting the correct car object according to the given type
+		FactoryInterface car = CarFactory.getModel(type);
+		
+		//showing details
+		car.opShowDetails();
+
+		//Closing the scanner object to avoid resource leaks
+		sc.close();
+
 	}
 
 }

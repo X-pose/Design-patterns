@@ -16,7 +16,9 @@ package singleton_pattern;
 
 public class SingletonClassLazy {
 
-	private SingletonClassLazy();
+	private SingletonClassLazy() {
+		
+	}
 	
 	//Declare a private variable of the same class type to store the object instance
 	private static SingletonClassLazy  instanceObj = null;

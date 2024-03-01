@@ -1,5 +1,8 @@
 package observer_pattern;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * @author		- 	Thathsara Pramodya Thalangama
  *
@@ -16,7 +19,7 @@ package observer_pattern;
  *
  * */
 
-public  class ConcreteSubject implements SubjectInterface{
+public class ConcreteSubject implements SubjectInterface{
 
     //Attributes goes here
     private List<ObserverInterface> observerList = new ArrayList<>();
@@ -37,7 +40,7 @@ public  class ConcreteSubject implements SubjectInterface{
     }
 
     public void removeObserver(ObserverInterface observerObj){
-       observerList.remove(observerObj)
+       observerList.remove(observerObj);
     }
 
     public void notifyObservers(){

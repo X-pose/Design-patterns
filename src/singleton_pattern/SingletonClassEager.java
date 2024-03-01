@@ -17,10 +17,12 @@ package singleton_pattern;
 
 public class SingletonClassEager {
 
-    private SingletonClassEager();
+    private SingletonClassEager() {
+    	
+    }
     private static SingletonClassEager singletonInstance = new SingletonClassEager();
 
-    public static getInstance(){
+    public static SingletonClassEager getInstance(){
         return singletonInstance;
     }
 }

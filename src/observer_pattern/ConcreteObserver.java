@@ -16,12 +16,12 @@ package observer_pattern;
  *
  *
  * */
-public class ConcreteObserver implements observerInterface{
+public class ConcreteObserver implements ObserverInterface{
 
     //Attributes goes here.
-    private ConcreteSubjecct subject;
+    private ConcreteSubject subject;
 
-    public ConcreteObserver(SubjectInterface subjectObj){
+    public ConcreteObserver(ConcreteSubject subjectObj){
         subjectObj.registerObserver(this);
     }
     public void updateObserver(){
