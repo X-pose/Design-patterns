@@ -13,6 +13,12 @@ import factory_pattern.CarFactory;
 //Singleton pattern imports
 import factory_pattern.FactoryInterface;
 import singleton_pattern.SingletonClassEager;
+import bridge_pattern.CheeseTopping;
+import bridge_pattern.ClassicPizza;
+import bridge_pattern.HamTopping;
+import bridge_pattern.PizzaInterface;
+import bridge_pattern.SupremePizza;
+import bridge_pattern.Topping;
 
 public class MainProgram {
 
@@ -26,6 +32,8 @@ public class MainProgram {
 		runFactoryMethod();
 		
 		runCommandMethod();
+		
+		runBridge();
 	}
 	
 	private static void runTemplateDesign() {
@@ -94,6 +102,25 @@ public class MainProgram {
 
         remoteControl.setCommand(turnOffCommand);
         remoteControl.pressButton(); // Light is off
+	}
+	
+	
+	private static void runBridge() {
+		
+		//Creating a cheeseTopping object
+		Topping cheeseTopping = new CheeseTopping();
+		
+		//Creating a supreme pizza with cheese topping.
+		PizzaInterface supremePizzaWithCheeseTopping = new SupremePizza(cheeseTopping);
+		
+		supremePizzaWithCheeseTopping.selectPizza();
+		
+		
+		Topping hamTopping = new HamTopping();
+		
+		PizzaInterface ClassicPizzaWithHamTopping = new ClassicPizza(hamTopping);
+		
+		ClassicPizzaWithHamTopping.selectPizza();
 	}
 
 }
